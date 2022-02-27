@@ -5,6 +5,7 @@ alaala = 0
 alaala2 = 0
 alaala3 = 0
 logo = """
+[SYSTEM] Discord Token Checker by Screaze
 """
 def variant1(token):
     response = get('https://discord.com/api/v6/auth/login', headers={"Authorization": token})
