@@ -4,7 +4,8 @@ import pyfiglet
 alaala = 0
 alaala2 = 0
 alaala3 = 0
-print("[$] Чекер дискорд токенов V2")
+logo = """
+"""
 def variant1(token):
     response = get('https://discord.com/api/v6/auth/login', headers={"Authorization": token})
     return True if response.status_code == 200 else False
@@ -44,13 +45,14 @@ if __name__ == "__main__":
                 name = randint(100000000, 9999999999)
                 with open(f'{name}.txt', 'w') as saveFile:
                     saveFile.write('\n'.join(checked))
-                print(f'[LOG] Токены были сохранены в {name}.txt!')
-        input('[$] Нажмите ENTER')
+                print("[LOG] Токены были сохранены в "+name+".txt!")
+        input('[SYSTEM] Нажмите ENTER')
         os.system("clear")
         print("[LOG] Статистика:")
-        print("[!] Валид:", +alaala)
-        print("[!] Не валидные:", +alaala2)
-        print("[!] Не верифицированы по номеру телефона:", +alaala3)
+        print("[LOG] Валид:", +alaala)
+        print("[LOG] Не валидные:", +alaala2)
+        print("[LOG] Заблокированые/Без номера телефона:", +alaala3)
     except:
         input('[LOG] Файл tokens.txt не найден! Нажмите ENTER для закрытия программы!')
+        exit()
 # End of code
