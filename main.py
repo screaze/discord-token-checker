@@ -45,7 +45,7 @@ if __name__ == "__main__":
                 name = randint(100000000, 9999999999)
                 with open(f'{name}.txt', 'w') as saveFile:
                     saveFile.write('\n'.join(checked))
-                print("[LOG] Токены были сохранены в "+name+".txt в директории с софтом!")
+                print("[LOG] Токены были сохранены в текстовый файл, найти их можно в директории с софтом.")
         input('[SYSTEM] Нажмите ENTER')
         os.system("clear")
         print("[LOG] Статистика:")
