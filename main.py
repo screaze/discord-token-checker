@@ -40,12 +40,12 @@ if __name__ == "__main__":
                     print(f'[LOG] Токен: {token} не валидный!')
                     alaala2 = alaala2+1
         if len(checked) > 0:
-            save = input(f'[LOG] {len(checked)} Валидных токенов! \n[!] Save to file? (y/n)').lower()
+            save = input(f'[LOG] {len(checked)} Валидных токенов! \n[SYSTEM] Сохранить в текстовый файл? (y/n)').lower()
             if save == 'y':
                 name = randint(100000000, 9999999999)
                 with open(f'{name}.txt', 'w') as saveFile:
                     saveFile.write('\n'.join(checked))
-                print("[LOG] Токены были сохранены в "+name+".txt!")
+                print("[LOG] Токены были сохранены в "+name+".txt в директории с софтом!")
         input('[SYSTEM] Нажмите ENTER')
         os.system("clear")
         print("[LOG] Статистика:")
